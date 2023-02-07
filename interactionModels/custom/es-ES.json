@@ -1,0 +1,838 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "mi viaje diario",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "PreguntaDiaSemanaIntent",
+          "slots": [
+            {
+              "name": "DayOfWeek",
+              "type": "DayOfWeek",
+              "samples": [
+                "{DayOfWeek}",
+                "Estamos a {DayOfWeek}",
+                "Hoy es {DayOfWeek}",
+                "Es {DayOfWeek}"
+              ]
+            }
+          ],
+          "samples": [
+            "Es {DayOfWeek}",
+            "Estamos a {DayOfWeek}",
+            "Hoy es {DayOfWeek}"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "PreguntaDiaIntent",
+          "slots": [
+            {
+              "name": "dia",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{dia}",
+                "Es {dia}",
+                "Hoy es {dia}"
+              ]
+            },
+            {
+              "name": "mes",
+              "type": "AMAZON.Month",
+              "samples": [
+                "{mes}",
+                "En {mes}",
+                "Estamos en {mes}"
+              ]
+            },
+            {
+              "name": "anio",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{anio}",
+                "En {anio}",
+                "Estamos en {anio}"
+              ]
+            }
+          ],
+          "samples": [
+            "Estamos a {dia} de {mes} de {anio}",
+            "Es {dia} de {mes} de {anio}",
+            "Hoy es {dia} de {mes} de {anio}"
+          ]
+        },
+        {
+          "name": "PreguntaTelefonoIntent",
+          "slots": [
+            {
+              "name": "telefono",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{telefono}",
+                "Es {telefono}",
+                "Mi teléfono es {telefono}",
+                "Mi número de teléfono es {telefono}"
+              ]
+            }
+          ],
+          "samples": [
+            "Mi teléfono es {telefono}",
+            "Mi número de teléfono es {telefono}"
+          ]
+        },
+        {
+          "name": "InicioJuegoIntent",
+          "slots": [
+            {
+              "name": "juego",
+              "type": "JuegoDisponible",
+              "samples": [
+                "Una {juego}",
+                "Un {juego}",
+                "La {juego}",
+                "El {juego}"
+              ]
+            }
+          ],
+          "samples": [
+            "Quiero completar la {juego}",
+            "Quiero completar el {juego}",
+            "Quiero probar la {juego}",
+            "Quiero probar el {juego}",
+            "Quiero jugar al {juego}",
+            "Quiero jugar a {juego}"
+          ]
+        },
+        {
+          "name": "PreguntaEdadIntent",
+          "slots": [
+            {
+              "name": "anios",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "Tengo {anios} años",
+                "Tengo {anios}"
+              ]
+            }
+          ],
+          "samples": [
+            "Tengo {anios}",
+            "Tengo {anios} años"
+          ]
+        },
+        {
+          "name": "PreguntaCuentaSimpleIntent",
+          "slots": [
+            {
+              "name": "num",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "Quedan {num}",
+                "Da {num}",
+                "El resultado es {num}",
+                "Es {num}"
+              ]
+            }
+          ],
+          "samples": [
+            "Da {num}",
+            "Es {num}",
+            "El resultado es {num}",
+            "Son {num}",
+            "Quedan {num}"
+          ]
+        },
+        {
+          "name": "PreguntaNombrePersonaIntent",
+          "slots": [
+            {
+              "name": "nombre_persona",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "Mi nombre es {nombre_persona}",
+            "Soy {nombre_persona}",
+            "Me llamo {nombre_persona}",
+            "Su nombre es {nombre_persona}",
+            "Es {nombre_persona}",
+            "Se llama {nombre_persona}"
+          ]
+        },
+        {
+          "name": "DefaultNumberIntent",
+          "slots": [
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "{number}"
+          ]
+        },
+        {
+          "name": "DefaultDayOfWeekIntent",
+          "slots": [
+            {
+              "name": "diaSemana",
+              "type": "DayOfWeek"
+            }
+          ],
+          "samples": [
+            "{diaSemana}"
+          ]
+        },
+        {
+          "name": "SimonDiceIntent",
+          "slots": [
+            {
+              "name": "serie",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "Simón Dice {serie} Final"
+          ]
+        },
+        {
+          "name": "PalabraIntrusaIntent",
+          "slots": [
+            {
+              "name": "palabraIntrusa",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{palabraIntrusa}",
+                "Es {palabraIntrusa}",
+                "La palabra es {palabraIntrusa}",
+                "La palabra intrusa es {palabraIntrusa}"
+              ]
+            }
+          ],
+          "samples": [
+            "La palabra es {palabraIntrusa}",
+            "La palabra intrusa es {palabraIntrusa}"
+          ]
+        },
+        {
+          "name": "FaltaIntent",
+          "slots": [
+            {
+              "name": "palabraFaltante",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "La palabra que falta es {palabraFaltante}",
+                "La palabra faltante es {palabraFaltante}",
+                "Falta {palabraFaltante}"
+              ]
+            }
+          ],
+          "samples": [
+            "Lo que falta es {palabraFaltante}",
+            "Faltan {palabraFaltante}",
+            "La palabra que falta es {palabraFaltante}",
+            "Falta la palabra {palabraFaltante}",
+            "La palabra faltante es {palabraFaltante}",
+            "Falta {palabraFaltante}"
+          ]
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": [
+            "Por supuesto que sí",
+            "Claro que sí",
+            "Sí claro",
+            "Afirmativo",
+            "Está claro",
+            "Por supuesto",
+            "Claro",
+            "Sí"
+          ]
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": [
+            "Pues no",
+            "No puedo",
+            "Va a ser que no",
+            "No me apetece",
+            "Negativo",
+            "Claro que no",
+            "Para nada",
+            "No"
+          ]
+        },
+        {
+          "name": "NoLoSeIntent",
+          "slots": [],
+          "samples": [
+            "Quién sabe",
+            "Vete tú a saber",
+            "Ni idea",
+            "Pues no sé",
+            "No tengo ni idea",
+            "No lo sé"
+          ]
+        },
+        {
+          "name": "MetoMaletaIntent",
+          "slots": [
+            {
+              "name": "prenda",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "Elijo los {prenda}",
+            "Elijo las {prenda}",
+            "Elijo el {prenda}",
+            "Elijo la {prenda}",
+            "Echo {prenda}",
+            "Elijo {prenda}",
+            "Meto {prenda}",
+            "Meto los {prenda}",
+            "Meto las {prenda}",
+            "Echo las {prenda}",
+            "Echo los {prenda}",
+            "Echo la {prenda}",
+            "Echo el {prenda}",
+            "Meto la {prenda}",
+            "Meto el {prenda}"
+          ]
+        },
+        {
+          "name": "DatoDestinoIntent",
+          "slots": [],
+          "samples": [
+            "Háblame del destino",
+            "Háblame de la ciudad",
+            "Quiero saber acerca del destino",
+            "Quiero saber acerca de la ciudad",
+            "Quiero saber más de donde estamos",
+            "Quiero saber más del destino",
+            "Quiero saber más de la ciudad",
+            "Quiero saber más",
+            "Quiero un dato de donde estamos",
+            "Quiero un dato del destino",
+            "Quiero un dato de la ciudad",
+            "Quiero un dato"
+          ]
+        },
+        {
+          "name": "PruebaServerIntent",
+          "slots": [],
+          "samples": [
+            "Prueba server",
+            "Prueba servidor"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "id": "7",
+              "name": {
+                "value": "domingo"
+              }
+            },
+            {
+              "id": "6",
+              "name": {
+                "value": "sábado"
+              }
+            },
+            {
+              "id": "5",
+              "name": {
+                "value": "viernes"
+              }
+            },
+            {
+              "id": "4",
+              "name": {
+                "value": "jueves"
+              }
+            },
+            {
+              "id": "3",
+              "name": {
+                "value": "miércoles"
+              }
+            },
+            {
+              "id": "2",
+              "name": {
+                "value": "martes"
+              }
+            },
+            {
+              "id": "1",
+              "name": {
+                "value": "lunes"
+              }
+            }
+          ],
+          "name": "DayOfWeek"
+        },
+        {
+          "values": [
+            {
+              "id": "7",
+              "name": {
+                "value": "lista de la compra",
+                "synonyms": [
+                  "la lista de la compra"
+                ]
+              }
+            },
+            {
+              "id": "6",
+              "name": {
+                "value": "maleta",
+                "synonyms": [
+                  "la maleta"
+                ]
+              }
+            },
+            {
+              "id": "5",
+              "name": {
+                "value": "qué tiempo falta"
+              }
+            },
+            {
+              "id": "4",
+              "name": {
+                "value": "series numérica"
+              }
+            },
+            {
+              "id": "3",
+              "name": {
+                "value": "campanadas"
+              }
+            },
+            {
+              "id": "2",
+              "name": {
+                "value": "palabra intrusa"
+              }
+            },
+            {
+              "id": "1",
+              "name": {
+                "value": "simon dice",
+                "synonyms": [
+                  "simón dice"
+                ]
+              }
+            },
+            {
+              "id": "0",
+              "name": {
+                "value": "test simple",
+                "synonyms": [
+                  "cuestionario simple",
+                  "cuestionario sencillo",
+                  "test sencillo",
+                  "cuestionario rápido",
+                  "cuestionario básico",
+                  "test básico",
+                  "test rápido"
+                ]
+              }
+            }
+          ],
+          "name": "JuegoDisponible"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "PreguntaDiaSemanaIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "DayOfWeek",
+              "type": "DayOfWeek",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.314704856467.1534193908283"
+              },
+              "validations": [
+                {
+                  "type": "hasEntityResolutionMatch",
+                  "prompt": "Slot.Validation.314704856467.1534193908283.333876729686"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "PreguntaDiaIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "dia",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.729487465230.150174156661"
+              },
+              "validations": [
+                {
+                  "type": "isGreaterThanOrEqualTo",
+                  "prompt": "Slot.Validation.743909054684.898040608526.468921185414",
+                  "value": "1"
+                },
+                {
+                  "type": "isLessThanOrEqualTo",
+                  "prompt": "Slot.Validation.743909054684.898040608526.1131817597949",
+                  "value": "31"
+                }
+              ]
+            },
+            {
+              "name": "mes",
+              "type": "AMAZON.Month",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.729487465230.1127101567465"
+              }
+            },
+            {
+              "name": "anio",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.729487465230.634377035918"
+              }
+            }
+          ]
+        },
+        {
+          "name": "PreguntaTelefonoIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "telefono",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.717498596287.1077293752273"
+              }
+            }
+          ]
+        },
+        {
+          "name": "InicioJuegoIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "juego",
+              "type": "JuegoDisponible",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1386224711874.1238596563615"
+              }
+            }
+          ]
+        },
+        {
+          "name": "PreguntaEdadIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "anios",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1314413910920.1474416850087"
+              },
+              "validations": [
+                {
+                  "type": "isLessThanOrEqualTo",
+                  "prompt": "Slot.Validation.1314413910920.1474416850087.517236408681",
+                  "value": "110"
+                },
+                {
+                  "type": "isGreaterThanOrEqualTo",
+                  "prompt": "Slot.Validation.1314413910920.1474416850087.315115068652",
+                  "value": "3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "PreguntaCuentaSimpleIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "num",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.911891853357.1600933823096"
+              }
+            }
+          ]
+        },
+        {
+          "name": "PreguntaNombrePersonaIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "nombre_persona",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ]
+        },
+        {
+          "name": "PalabraIntrusaIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "palabraIntrusa",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1444568428894.97664079801"
+              }
+            }
+          ]
+        },
+        {
+          "name": "FaltaIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "palabraFaltante",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.362670920909.215102560302"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.314704856467.1534193908283",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Qué día de la semana es hoy?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.314704856467.1534193908283.333876729686",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Dime un día de la semana válido, por favor."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.729487465230.150174156661",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Qué día del mes es hoy?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.729487465230.1127101567465",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿En qué mes estamos?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.729487465230.634377035918",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿En qué año estamos?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.717498596287.1077293752273",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Perdona, ¿puedes decirme tu número de teléfono?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1386224711874.1238596563615",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Qué juego te apetece intentar?"
+          },
+          {
+            "type": "PlainText",
+            "value": "¿Qué juego quieres probar?"
+          },
+          {
+            "type": "PlainText",
+            "value": "¿A qué juego quieres jugar?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1314413910920.1474416850087",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Cuántos años tienes?"
+          },
+          {
+            "type": "PlainText",
+            "value": "¿Qué edad tienes?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1314413910920.1474416850087.517236408681",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "No me creo que seas tan mayor. Ahora en serio, ¿qué edad tienes?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1314413910920.1474416850087.315115068652",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "No me creo que seas tan joven. Ahora en serio, ¿qué edad tienes?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.911891853357.1600933823096",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Cuál es el resultado de restar tres a veinte?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.704420157259.1630996568148",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Cómo se llamaba el rey anterior?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1150433136973.1407905777583",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Qué día es hoy?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.743909054684.898040608526.468921185414",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Por favor, introduce un día válido."
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.743909054684.898040608526.1131817597949",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Por favor, introduce un día válido."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1444568428894.97664079801",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Cuál es la palabra incorrecta?"
+          },
+          {
+            "type": "PlainText",
+            "value": "¿Cuál es la palabra sobrante?"
+          },
+          {
+            "type": "PlainText",
+            "value": "¿Cuál es la palabra intrusa?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.362670920909.215102560302",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Cuál es la palabra faltante?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "60"
+}
